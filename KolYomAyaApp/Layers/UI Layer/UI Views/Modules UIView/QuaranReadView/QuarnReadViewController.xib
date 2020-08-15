@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuarnReadViewController" customModule="KolYoumAya" customModuleProvider="target">
+            <connections>
+                <outlet property="ayaNameTextField" destination="R7B-rV-1nM" id="BiM-zR-IEw"/>
+                <outlet property="heightView" destination="T2r-6k-mnC" id="gil-i4-c7g"/>
+                <outlet property="numberAyatTextField" destination="VME-ej-NLn" id="Wp8-si-mKe"/>
+                <outlet property="pageNumberTextField" destination="yuk-OI-EA8" id="dEU-LT-eNy"/>
+                <outlet property="suraImage" destination="OIS-RA-PYM" id="Uln-x6-Sgq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewPickerView" destination="gbC-K0-ak3" id="3TQ-A1-2o3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OIS-RA-PYM">
+                    <rect key="frame" x="8" y="44" width="398" height="797"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbC-K0-ak3">
+                    <rect key="frame" x="0.0" y="846" width="414" height="50"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="F0y-Eb-Iny">
+                            <rect key="frame" x="10" y="0.0" width="394" height="50"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yuk-OI-EA8">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="50"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="الفاتحة" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R7B-rV-1nM">
+                                    <rect key="frame" x="133" y="0.0" width="128" height="50"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VME-ej-NLn">
+                                    <rect key="frame" x="266" y="0.0" width="128" height="50"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.12941176469999999" green="0.52156862749999999" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="F0y-Eb-Iny" secondAttribute="bottom" id="BMF-0r-YNb"/>
+                        <constraint firstAttribute="height" constant="50" id="T2r-6k-mnC"/>
+                        <constraint firstItem="F0y-Eb-Iny" firstAttribute="leading" secondItem="gbC-K0-ak3" secondAttribute="leading" constant="10" id="jUv-xe-4uR"/>
+                        <constraint firstItem="F0y-Eb-Iny" firstAttribute="top" secondItem="gbC-K0-ak3" secondAttribute="top" id="s0O-EX-1lN"/>
+                        <constraint firstAttribute="trailing" secondItem="F0y-Eb-Iny" secondAttribute="trailing" constant="10" id="wd2-dq-utH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="gbC-K0-ak3" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="QRF-QX-HUP"/>
+                <constraint firstItem="gbC-K0-ak3" firstAttribute="top" secondItem="OIS-RA-PYM" secondAttribute="bottom" constant="5" id="R7W-P6-9Ph"/>
+                <constraint firstItem="gbC-K0-ak3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="T6S-fm-xte"/>
+                <constraint firstItem="gbC-K0-ak3" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="W7K-6o-H7A"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OIS-RA-PYM" secondAttribute="trailing" constant="8" id="WeM-YR-dou"/>
+                <constraint firstItem="OIS-RA-PYM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="XeD-9y-FvG"/>
+                <constraint firstItem="OIS-RA-PYM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="pgq-h5-UdM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-201" y="169"/>
+        </view>
+    </objects>
+</document>
