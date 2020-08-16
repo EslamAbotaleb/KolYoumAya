@@ -105,10 +105,19 @@ extension QuarnReadViewController: ToolbarPickerViewDelegate {
 
         self.viewModel?.quraanReadBySurahAndAyah(surahId: (self.surahIdNumber)!, ayah: self.numberAyat.uniques[rowNumberAyat], completionHandler: {[weak self] (resultQuraanPageModel) in
             self?.quraanReadModel = resultQuraanPageModel
-            if let pageNum = self?.quraanReadModel?.quraanPage?.pageNumber {
-                 self?.pageNumberTextField.text  = "\(pageNum)"
-
-             }
+            
+            
+            if self?.pageNumberSelected ==  false {
+                                 if let pageNum = self?.quraanReadModel?.quraanPage?.pageNumber {
+                                               self?.pageNumberTextField.text  = "\(pageNum)"
+                                           }
+                          
+                      }
+            
+//            if let pageNum = self?.quraanReadModel?.quraanPage?.pageNumber {
+//                 self?.pageNumberTextField.text  = "\(pageNum)"
+//
+//             }
               //Mark:- in this will be add surah ayat
             self?.suraImage.imageFromURL(urlString: (self?.quraanReadModel?.quraanPage?.image)!)
              for indexAya in 0..<(self?.quraanReadModel?.quraanPage?.surahList!.count)! {
